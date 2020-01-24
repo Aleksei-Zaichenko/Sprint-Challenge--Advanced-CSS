@@ -1,1 +1,21 @@
 // Mixins Here
+
+.h1Style(@fontSize: 4rem, @marginHeigh: 1%, @marginWidth: 0 ){
+    font-size: @fontSize;
+    margin: @marginHeigh @marginWidth;
+}
+
+.linksStyle(@fontSize:1.7rem, @color: #141f1f, @textDecor: none){
+    font-size: @fontSize;
+    color: @color;
+    text-decoration:@textDecor;
+}
+
+.buttonStyle(@buttonSize: 30%, @bkgColor: #1f2e2e, @fontColor:white){
+    width: @buttonSize;
+    background-color: @bkgColor;
+    color: @fontColor;
+    border-radius: 8px;
+    padding: 2%;
+    font-size: 2rem;
+}
