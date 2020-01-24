@@ -1,31 +1,104 @@
+
+.navigationAndHeader {
+
+  background-color: WhiteSmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1{
+    font-size: 4rem;
+    margin: 1% 0;
+  }//h1
+
+  nav{
+    margin: 1% 0;
+    width: 39%;
+    display: flex;
+    justify-content: space-between;
+
+      a{
+        .linksStyle();
+      }
+
+      @media @phone {
+        width: 77%;
+      }
+
+  }//nav
+
+}//.navigationAndHeader
+
 // Home Content
 
 .home {
 
   .intro {
 
+    @media @phone {
+      
+      .EarthImage {
+        img{
+          width: 100%;
+          border-radius: 6px;
+        }
+      }//.EarthImage
+    }//@media @phone
+
     h2 {
       padding: 15px;
     }
 
-    p {
+    p{
       padding:0 15px;
     }
-  
+
   }
+
+
 
   .space-images {
     display: flex;
-    flex-wrap: wrap;
     width: 100%;
 
-    img {
-      width: 28%;
+    div{
+      width: 35%;
+      
       margin: 20px 2.5%;
-      border-radius: 20px;
-      height: 100%;
+
+      img {
+        width: 100%;
+        border-radius: 20px;
+        height: 100%;
+      }
     }
-  }
+
+    @media @phone {
+
+      .rocket{
+        width: 100%;
+        margin: 20px 2.5%;
+
+        display: flex;
+        justify-content: space-between;
+
+        img {
+          width: 96%;
+          margin: 2%;
+          height: 100%;
+        }
+      }
+
+      .imageInTheMiddle{
+        display: none;
+      }
+
+      .imageOnTheRight{
+        display: none;
+      }
+
+    }//@media @phone 
+  }//.space-images
 
   .visit-planets {
     padding: 15px;
@@ -37,6 +110,7 @@
     p {
       margin-top: 13px;
     }
+
   }
 
   .walk {
@@ -58,6 +132,9 @@
       }
 
       .btn {
+       button{
+        .buttonStyle();
+        } 
       }
     }
 
@@ -70,6 +147,34 @@
         height: auto;
         border-radius: 10px;
       }
-    }
-  }
+    }//.walk-img
+
+    @media @phone {
+      margin-top: 20px;
+      flex-direction: column-reverse;
+      padding: 20px 20px;
+
+      .walk-text {
+        width: 100%;
+  
+        h3 {
+          margin: 10px 0;
+        }
+  
+      .btn {
+        button{
+          .buttonStyle(@buttonSize: 100%);
+          padding: 5%;
+          } 
+        }
+      }//.walk-text
+
+      .walk-img {
+        width: 100%;
+        margin-left: 0;
+      }
+
+    }//@media @phone
+  }//.walk
+
 }// home
